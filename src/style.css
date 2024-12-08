@@ -5,7 +5,6 @@
 }
 
 body {
-  color: white;
   overflow: hidden;
 }
 
@@ -14,3 +13,7 @@ canvas {
   top: 0;
   left: 0;
 }
+
+h1.site-title{
+ color: #414141;
+} 
