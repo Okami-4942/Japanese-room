@@ -42,7 +42,7 @@ function init() {
 
   // GLTFモデルの読み込み
   const loader = new GLTFLoader();
-  loader.load("/myroom.glb", function (gltf) {
+  loader.load("/yawaraginagomi.glb", function (gltf) {
     model = gltf.scene;
 
     // 初期スケール & 角度調整
@@ -88,9 +88,45 @@ function animate() {
     }
 
     else if(scrollPercent >= 0.2 && scrollPercent <= 0.25){
-      model.position.x = getScrollValue(8.5, -6, 0.2, 0.25);
+      model.position.x = getScrollValue(8.5, -7, 0.2, 0.25);
       model.rotation.y = getScrollValue(0, Math.PI,0.2,0.25);
+      model.rotation.x = getScrollValue(0.3, 0.4, 0.2, 0.25);
+      model.position.y = getScrollValue(0,0.3,0.02,0.25);
     }
+
+    else if(scrollPercent >= 0.36 && scrollPercent <= 0.42){
+      model.position.x = getScrollValue(-7, 4.8, 0.36, 0.42);
+      model.rotation.y = getScrollValue(Math.PI, Math.PI/3,0.36,0.42);
+      model.position.z = getScrollValue(-4, 5, 0.36, 0.42);
+      model.rotation.x = getScrollValue(0.4, 0.6, 0.36, 0.42);
+    }  
+
+    else if(scrollPercent >= 0.52 && scrollPercent <= 0.57){
+      model.position.x = getScrollValue(4.8, 0, 0.52, 0.57);
+      model.rotation.y = getScrollValue(Math.PI/3, Math.PI/2,0.52,0.57);
+      model.position.z = getScrollValue(5, -3, 0.52, 0.57);
+    }  
+
+    else if(scrollPercent >= 0.57 && scrollPercent <= 0.6){
+      model.position.x = getScrollValue(0, -2, 0.57, 0.6);
+      model.position.z = getScrollValue(-3, 7, 0.57, 0.6);
+      model.rotation.x = getScrollValue(0.6, 0.5, 0.57, 0.6);
+      model.position.y = getScrollValue(0.3,-1,0.57,0.6);
+    }  
+
+    else if(scrollPercent >= 0.70 && scrollPercent <= 0.77){
+      model.position.x = getScrollValue(-2, 0, 0.70, 0.77);
+      model.position.z = getScrollValue(7, -3, 0.70, 0.77);
+      model.rotation.y = getScrollValue(Math.PI/2, 0,0.70,0.77);
+    }  
+
+    else if(scrollPercent >= 0.77 && scrollPercent <= 0.8){
+      model.position.x = getScrollValue(0, 2.5, 0.77, 0.8);
+      model.position.z = getScrollValue(-3, 7, 0.77, 0.8);
+      model.rotation.y = getScrollValue(0,Math.PI/4,0.77,0.8);
+      model.rotation.x = getScrollValue(0.5, 0.7, 0.77, 0.8);
+    }  
+
 
   }
 
