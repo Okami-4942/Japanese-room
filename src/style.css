@@ -1,19 +1,194 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
-body {
+@font-face{
+  font-family: "Hannari";
+  src: url(/HannariMincho-Regular.otf) format("opentype");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "eng";
+  src: url(/Cormorant-Italic-VariableFont_wght.ttf) format("opentype");
+  font-display: swap;
+}
+
+/* body {
   overflow: hidden;
+} */
+
+body {
+  font-family: "Hannari";
+  background-attachment: fixed;
+  background-color: #eeeeee
 }
 
 canvas {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
 }
 
-h1.site-title{
- color: #414141;
-} 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.title h1{
+  text-align: center;
+  font-size: 100px;
+  padding-bottom: 50px;
+  padding-top: 275px;
+  color: #4d4d4d;
+  font-family: "Hannari";
+}
+
+.title p{
+  text-align: center;
+  padding-bottom: 250px;
+  color: #4d4d4d;
+}
+
+.about{
+  background-color: #95c6cc;
+  border-radius: 0px 50px 50px 0px;
+  margin-right: 50%;
+  color: #476266;
+  padding: 200px 75px;
+  background-image: url(/shiromaru.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: left 6% top 5%;
+  background-attachment: fixed;
+}
+
+.about h2{
+  padding-left: 8%;
+}
+
+h2{
+  font-size: 50px;
+  padding: 100px 80px 200px 80px;
+}
+
+p{
+  font-size:  25px;
+  padding: 0px 50px;
+  line-height: 250%;
+}
+
+.engawa{
+  text-align: right;
+  background-color: #A5C9C1;
+  border-radius: 50px 0px 0px 50px;
+  
+  color: #51665f;
+  padding: 200px 75px;
+  margin-left: 50%;
+  margin-top: 30%;
+
+  right: 0;
+  background-image: url(/shiromaru.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: right 6% top 5%;
+  background-attachment: fixed;
+}
+
+.engawa h2{
+  padding-right: 8%;
+}
+
+.zataku{
+  background-color: #95c6cc;
+  border-radius: 0px 50px 50px 0px;
+  margin-right: 50%;
+  color: #476266;
+  padding: 200px 75px;
+  margin-top: 30%;
+  background-image: url(/shiromaru.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: right 50% top 5%;
+  background-attachment: fixed;
+}
+
+.zataku h2{
+  padding-left: 8%;
+}
+
+.tigaidana{
+  text-align: right;
+  background-color: #A5C9C1;
+  border-radius: 50px 0px 0px 50px;
+  
+  color: #51665f;
+  padding: 200px 75px;
+  margin-left: 50%;
+  margin-top: 30%;
+
+  right: 0;
+  background-image: url(/shiromaru.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: left 50% top 5%;
+  background-attachment: fixed;
+}
+
+.tigaidana h2{
+  padding-right: 8%;
+}
+
+.andon{
+  background-color: #95c6cc;
+  border-radius: 0px 50px 50px 0px;
+  margin-right: 50%;
+  color: #476266;
+  padding: 200px 75px;
+  margin-top: 30%;
+  background-image: url(/shiromaru.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: left 30% top 5%;
+  background-attachment: fixed;
+}
+
+.andon h2{
+  padding-left: 8%;
+}
+
+.futon{
+  text-align: right;
+  background-color: #A5C9C1;
+  border-radius: 50px 0px 0px 50px;
+  
+  color: #51665f;
+  padding: 200px 75px;
+  margin-left: 50%;
+  margin-top: 30%;
+  margin-bottom: 700px;
+
+  right: 0;
+  background-image: url(/shiromaru.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: right 30% top 5%;
+  background-attachment: fixed;
+}
+
+.futon h2{
+  padding-right: 8%;
+}
