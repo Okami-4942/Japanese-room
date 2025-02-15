@@ -33,7 +33,7 @@ function init() {
   renderer.setPixelRatio(window.devicePixelRatio);
 
   // 環境光 & 平行光
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  const ambientLight = new THREE.AmbientLight(0xf2f2f2, 2.6);
   scene.add(ambientLight);
 
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -88,29 +88,31 @@ function animate() {
     }
 
     else if(scrollPercent >= 0.2 && scrollPercent <= 0.25){
-      model.position.x = getScrollValue(8.5, -7, 0.2, 0.25);
-      model.rotation.y = getScrollValue(0, Math.PI,0.2,0.25);
+      model.position.x = getScrollValue(8.5, -3, 0.2, 0.25);
+      model.rotation.y = getScrollValue(0, Math.PI/1.1,0.2,0.25);
       model.rotation.x = getScrollValue(0.3, 0.4, 0.2, 0.25);
-      model.position.y = getScrollValue(0,0.3,0.02,0.25);
+      model.position.y = getScrollValue(0,1.5,0.2,0.25);
+      model.position.z = getScrollValue(-4, -2, 0.2, 0.25);
     }
 
     else if(scrollPercent >= 0.36 && scrollPercent <= 0.42){
-      model.position.x = getScrollValue(-7, 4.8, 0.36, 0.42);
-      model.rotation.y = getScrollValue(Math.PI, Math.PI/3,0.36,0.42);
-      model.position.z = getScrollValue(-4, 5, 0.36, 0.42);
-      model.rotation.x = getScrollValue(0.4, 0.6, 0.36, 0.42);
+      model.position.x = getScrollValue(-3, 4.5, 0.36, 0.42);
+      model.rotation.y = getScrollValue(Math.PI/1.1, Math.PI/10,0.36,0.42);
+      model.position.z = getScrollValue(-2, 7, 0.36, 0.42);
+      model.rotation.x = getScrollValue(0.4, 0.65, 0.36, 0.42);
     }  
 
     else if(scrollPercent >= 0.52 && scrollPercent <= 0.57){
-      model.position.x = getScrollValue(4.8, 0, 0.52, 0.57);
-      model.rotation.y = getScrollValue(Math.PI/3, Math.PI/2,0.52,0.57);
-      model.position.z = getScrollValue(5, -3, 0.52, 0.57);
+      model.position.x = getScrollValue(4.5, 0, 0.52, 0.57);
+      model.rotation.y = getScrollValue(Math.PI/10, Math.PI/2,0.52,0.57);
+      model.position.z = getScrollValue(7, -3, 0.52, 0.57);
+      model.position.y = getScrollValue(1.5,0,0.52,0.57);
     }  
 
     else if(scrollPercent >= 0.57 && scrollPercent <= 0.6){
       model.position.x = getScrollValue(0, -2, 0.57, 0.6);
       model.position.z = getScrollValue(-3, 7, 0.57, 0.6);
-      model.rotation.x = getScrollValue(0.6, 0.5, 0.57, 0.6);
+      model.rotation.x = getScrollValue(0.65, 0.5, 0.57, 1);
       model.position.y = getScrollValue(0.3,-1,0.57,0.6);
     }  
 
@@ -121,12 +123,27 @@ function animate() {
     }  
 
     else if(scrollPercent >= 0.77 && scrollPercent <= 0.8){
-      model.position.x = getScrollValue(0, 2.5, 0.77, 0.8);
-      model.position.z = getScrollValue(-3, 7, 0.77, 0.8);
-      model.rotation.y = getScrollValue(0,Math.PI/4,0.77,0.8);
-      model.rotation.x = getScrollValue(0.5, 0.7, 0.77, 0.8);
+      model.position.x = getScrollValue(0,2.5, 0.77, 0.8);
+      model.position.z = getScrollValue(-3, 8, 0.77, 0.8);
+      model.rotation.y = getScrollValue(0,Math.PI/2,0.77,0.8);
+      model.rotation.x = getScrollValue(0.5, 0.4, 0.77, 0.8);
+      model.position.y = getScrollValue(-1,-2,0.77,0.8);
     }  
 
+    else if(scrollPercent >= 0.86 && scrollPercent <= 0.91){
+      model.position.x = getScrollValue(2.5, 0, 0.86, 0.91);
+      model.position.z = getScrollValue(8, -3, 0.86, 0.91);
+      model.rotation.y = getScrollValue(Math.PI/2, 0,0.86,0.91);
+      model.rotation.x = getScrollValue(0.4, Math.PI/18, 0.86, 0.91);
+    }
+
+    else if(scrollPercent >= 0.91 && scrollPercent <= 0.95){
+      model.position.x = getScrollValue(0,-5.7, 0.91, 0.95);
+      model.position.z = getScrollValue(-3,4, 0.91, 0.95);
+      model.rotation.y = getScrollValue(0,Math.PI/3,0.91,0.95);
+      model.rotation.x = getScrollValue(Math.PI/18,0.6,0.91, 0.95);
+      model.position.y = getScrollValue(-2,0.7,0.91,0.95);
+    }
 
   }
 
