@@ -76,18 +76,20 @@ function animate() {
     
 
     if(scrollPercent >= 0.04 && scrollPercent <= 0.10){
-    model.position.x = getScrollValue(0,8.5 , 0.04, 0.10);
-    model.rotation.y = getScrollValue(Math.PI/4, 0,0.04,0.10);
-    model.position.z = getScrollValue(0, -2, 0.04, 0.10);
-    model.rotation.x = getScrollValue(Math.PI/18, 0.4, 0.04, 0.10);
+     model.position.x = getScrollValue(0,8, 0.04, 0.10);
+     model.rotation.y = getScrollValue(Math.PI/4, Math.PI/10,0.04,0.10);
+     model.position.z = getScrollValue(0, -2, 0.04, 0.10);
+     model.rotation.x = getScrollValue(Math.PI/18, 0.4, 0.04, 0.10);
+    }
+
+    else if(scrollPercent >= 0.10 && scrollPercent <= 0.19){
+      model.rotation.y += 0.005;
     }
 
     else if(scrollPercent >= 0.2 && scrollPercent <= 0.25){
-      model.position.x = getScrollValue(8.5, -5, 0.2, 0.25);
-      model.rotation.y = getScrollValue(0, Math.PI/1.1,0.2,0.25);
-      model.rotation.x = getScrollValue(0.3, 0.4, 0.2, 0.25);
+      model.position.x = getScrollValue(8, -5, 0.2, 0.25);
+      model.rotation.y = getScrollValue(Math.PI/10, Math.PI/1.1,0.2,0.25);
       model.position.y = getScrollValue(0,1.5,0.2,0.25);
-      model.position.z = getScrollValue(-4, -2, 0.2, 0.25);
     }
 
     else if(scrollPercent >= 0.36 && scrollPercent <= 0.42){
