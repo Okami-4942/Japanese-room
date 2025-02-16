@@ -83,12 +83,12 @@ function animate() {
     }
 
     else if(scrollPercent >= 0.10 && scrollPercent <= 0.19){
-      model.rotation.y += 0.005;
+      model.rotation.y = getScrollValue(Math.PI/10, Math.PI,0.10,0.19);
     }
 
     else if(scrollPercent >= 0.2 && scrollPercent <= 0.25){
       model.position.x = getScrollValue(8, -5, 0.2, 0.25);
-      model.rotation.y = getScrollValue(Math.PI/10, Math.PI/1.1,0.2,0.25);
+      model.rotation.y = getScrollValue(Math.PI,Math.PI/1.1,0.2,0.25);
       model.position.y = getScrollValue(0,1.5,0.2,0.25);
     }
 
